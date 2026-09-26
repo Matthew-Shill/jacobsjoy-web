@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Jacob's Joy, Inc. — brand
+  Provided and used as given:
+    Navy #0A1A3B, blue #1E6FE0, gold #E8A817,
+    warm white page background #FAF7F2,
+    Playfair Display (bold) for titles, hero text, emotional lines, and event names,
+    DM Sans for navigation, buttons, labels, and captions,
+    Source Sans 3 at 16px with generous line height for body copy.
+  The official logo is black line art (script wordmark + “I love you” hand sign)
+  on a transparent background. It is not recolored or redrawn.
+
+  Gaps filled, because those fields were empty:
+    Favicon and social share image: the official logo plated on warm white,
+    framed a little tighter on the favicon so the hand sign still reads at 32px.
+    Mailing address: 33 Le Pere Drive, Pittsford, NY 14534, published on
+    jacobsjoyinc.com/donation.
+    Hours: Monday–Friday, 9 a.m.–5 p.m. Eastern, inferred for a nationwide
+    nonprofit that replies on weekdays. Event times follow the host site.
+
+  Gold (#E8A817) on warm white is about 2:1, so gold is used for fills, rules,
+  and large shapes. Text on gold is navy. Small text stays navy. Blue buttons
+  use white text (about 4.8:1). Page background stays warm white, including
+  in dark-mode environments.
+*/
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: #faf7f2;
+  --color-cream-deep: #f3ece3;
+  --color-field: #fffdf8;
+  --color-navy: #0a1a3b;
+  --color-navy-soft: #15284f;
+  --color-blue: #1e6fe0;
+  --color-gold: #e8a817;
+  --color-gold-deep: #c99212;
+  --color-muted: #31456e;
+  --color-danger: #7f1d1d;
+  --font-display: var(--font-playfair), "Palatino Linotype", Palatino, serif;
+  --font-body: var(--font-source), "Source Sans 3", sans-serif;
+  --font-ui: var(--font-dm), "DM Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #faf7f2;
+  color: #0a1a3b;
+  font-family: var(--font-source), "Source Sans 3", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+::selection {
+  background: #e8a817;
+  color: #0a1a3b;
+}
+
+:focus-visible {
+  outline: 3px solid #1e6fe0;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 80;
+  transform: translateY(-200%);
+  border-radius: 999px;
+  background: #0a1a3b;
+  color: #faf7f2;
+  padding: 0.75rem 1.1rem;
+  font-family: var(--font-dm), "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+section[id],
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
