@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-navy/10 bg-cream">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <a href="#top" className="inline-flex items-center gap-3">
+          <a href="/#top" className="inline-flex items-center gap-3">
             <Image
               src="/brand/logo.png"
               alt=""
@@ -25,7 +25,7 @@ export function Footer() {
         </div>
 
         <nav aria-label="Footer">
-          <p className="font-ui text-xs font-semibold uppercase tracking-[0.18em]">On this page</p>
+          <p className="font-ui text-xs font-semibold uppercase tracking-[0.18em]">Visit</p>
           <ul className="mt-4 space-y-2">
             {nav.map((item) => (
               <li key={item.href}>
@@ -35,12 +35,12 @@ export function Footer() {
               </li>
             ))}
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="#programs">
+              <a className="text-base underline-offset-4 hover:underline" href="/#programs">
                 Carnival days
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="#participate">
+              <a className="text-base underline-offset-4 hover:underline" href="/#participate">
                 Events and registration
               </a>
             </li>
@@ -51,22 +51,22 @@ export function Footer() {
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.18em]">Get involved</p>
           <ul className="mt-4 space-y-2">
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="#funding" data-interest="donate">
+              <a className="text-base underline-offset-4 hover:underline" href="/#funding" data-interest="donate">
                 Donate
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="#funding" data-interest="sponsor">
+              <a className="text-base underline-offset-4 hover:underline" href="/#funding" data-interest="sponsor">
                 Sponsors and partners
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="#contact" data-interest="volunteer">
+              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="volunteer">
                 Volunteer
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="#contact" data-interest="register">
+              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="register">
                 Register a family
               </a>
             </li>
@@ -116,7 +116,12 @@ export function Footer() {
           <p>
             © {year} {site.name} · A 501(c)(3) nonprofit · EIN {site.ein}
           </p>
-          <p>Based in Pittsford, New York. Serving families nationwide.</p>
+          <p className="flex flex-wrap gap-x-4 gap-y-1">
+            <span>Based in Pittsford, New York. Serving families nationwide.</span>
+            <a className="underline underline-offset-4" href="/privacy">
+              Privacy policy
+            </a>
+          </p>
         </div>
       </div>
     </footer>

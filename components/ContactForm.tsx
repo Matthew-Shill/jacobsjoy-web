@@ -126,7 +126,10 @@ export function ContactForm() {
     >
       <h3 className="font-display text-3xl font-bold">Send a note</h3>
       <p className="mt-2 text-base leading-relaxed text-muted">
-        Name, email, and a message. We use this only to reply.
+        Name, email, and a message. We use this only to reply.{" "}
+        <a className="font-semibold text-navy underline underline-offset-4" href="/privacy">
+          Privacy policy
+        </a>.
       </p>
 
       {errorItems.length > 0 ? (

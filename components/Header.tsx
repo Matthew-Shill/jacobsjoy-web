@@ -25,7 +25,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-navy/10 bg-cream/95 backdrop-blur-md">
       <div className="h-1 bg-gold" aria-hidden="true" />
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <a href="#top" aria-label="Jacob’s Joy, Inc., home" className="flex min-w-0 items-center gap-3 rounded-full">
+        <a href="/#top" aria-label="Jacob’s Joy, Inc., home" className="flex min-w-0 items-center gap-3 rounded-full">
           <Image
             src="/brand/logo.png"
             alt="Jacob’s Joy, Inc."
@@ -52,14 +52,14 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <ButtonLink href="#funding" interest="donate" variant="gold">
+          <ButtonLink href="/#funding" interest="donate" variant="gold">
             Donate
           </ButtonLink>
         </nav>
 
         <div className="flex items-center gap-2 lg:hidden">
           <ButtonLink
-            href="#funding"
+            href="/#funding"
             interest="donate"
             variant="gold"
             className="px-4"

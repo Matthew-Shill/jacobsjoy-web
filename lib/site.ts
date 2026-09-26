@@ -32,11 +32,11 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "#story", label: "About" },
-  { href: "#programs", label: "Programs" },
-  { href: "#get-involved", label: "Get involved" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#story", label: "About" },
+  { href: "/#programs", label: "Programs" },
+  { href: "/#get-involved", label: "Get involved" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export const socials = [
