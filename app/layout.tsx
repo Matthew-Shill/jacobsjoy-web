@@ -31,7 +31,7 @@ const description =
   "Jacob’s Joy, Inc. brings free carnival days to children’s hospitals, camps, and family retreats. Games, prizes, and family time for kids, siblings, and parents.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(site.hostedUrl),
   title,
   description,
   applicationName: site.name,
@@ -39,15 +39,24 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: site.url,
+    url: site.hostedUrl,
     siteName: site.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jacob with his mom and dad, and the Jacob’s Joy logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/twitter-image.png"],
   },
   robots: { index: true, follow: true },
 };

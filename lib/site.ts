@@ -29,6 +29,10 @@ export const site = {
   hoursNote: "Carnival times follow the hospital, camp, or retreat.",
   ein: "39-4229056",
   url: "https://jacobsjoyinc.com",
+  // This app is deployed here until jacobsjoyinc.com (still WordPress) points
+  // at it. Share-image URLs must use this host or link previews 404 and fall
+  // back to the hero photo.
+  hostedUrl: "https://jacobsjoy-web.vercel.app",
 } as const;
 
 export const nav = [
