@@ -26,7 +26,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const title = "Jacob’s Joy, Inc. | Carnivals, Retreats, and Every1Camp";
+const title = site.name;
 const description =
   "Jacob’s Joy provides free carnival days at children’s hospitals, free family retreats, and supports free sports camps for children with disabilities through a partnership with Every1Camp.";
 
