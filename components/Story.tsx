@@ -4,11 +4,11 @@ import { site, storyPhotos, videos } from "@/lib/site";
 
 export function Story() {
   return (
-    <section id="story" aria-labelledby="story-heading" className="bg-cream-deep py-20 md:py-28">
+    <section id="story" aria-labelledby="story-heading" className="scroll-mt-28 bg-cream-deep py-20 md:py-28">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <SectionLabel>Jacob’s story and mission</SectionLabel>
+            <SectionLabel>Jacob’s story</SectionLabel>
             <h2
               id="story-heading"
               className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
@@ -30,28 +30,18 @@ export function Story() {
                 laugh best.
               </p>
               <p>
-                Jacob’s Joy, Inc. was created in his memory to share that same
-                joy and hope with children and families facing their own battles.
-                Not later, when things calm down. Now. With games, prizes, and a
-                room full of people who came to play.
-              </p>
-              <p>
-                We serve children facing cancer, disabilities, and other serious
-                illnesses, and we serve the siblings and parents beside them.
-                Every program is free, adaptive, and inclusive. A parent or
-                caregiver comes with every child. Nobody has to earn a place in
-                the fun, and we never promise a medical result. We create
-                opportunities for play, joy, and connection.
+                Jacob’s Joy, Inc. was created in his memory. The work today is
+                free carnival days at children’s hospitals, free family retreats
+                at Christian campgrounds, and support for free sports camps
+                through our partnership with Every1Camp.
               </p>
             </div>
-            <blockquote className="mt-8 border-l-4 border-gold pl-5">
-              <p className="font-display text-2xl font-bold leading-snug sm:text-3xl">
-                {`“${site.mission}”`}
-              </p>
-              <footer className="mt-3 font-ui text-sm font-semibold uppercase tracking-[0.16em] text-muted">
-                Mission of Jacob’s Joy, Inc.
-              </footer>
-            </blockquote>
+            <div className="mt-8">
+              <h3 className="font-ui text-sm font-semibold uppercase tracking-[0.16em] text-muted">
+                Our Mission
+              </h3>
+              <p className="mt-3 text-base leading-relaxed">{site.mission}</p>
+            </div>
             <p className="mt-8 text-lg leading-relaxed">
               Our logo is the “I love you” hand sign — the same one Jacob and his
               dad share in photos from his hospital room. It is still how this

@@ -2,42 +2,49 @@ import { SectionLabel } from "@/components/SectionLabel";
 
 const stories = [
   {
-    title: "A sibling’s own turn",
-    body: "Siblings spend a lot of time being steady in waiting rooms. At a Jacob’s Joy carnival they get a booth, a prize, and a turn that belongs to them — and they usually end up sharing it anyway.",
+    title: "A hospital carnival day",
+    body: "Carnival games, activities, entertainment, and prizes come to the children’s hospital. Patients, siblings, and parents get time together, and activities are adapted so more kids can take part.",
   },
   {
-    title: "Parents in the game",
-    body: "Moms and dads are not asked to stand against the wall and supervise. The games are for them, too. A family that plays together gets a memory that isn’t about an appointment.",
+    title: "A family retreat",
+    body: "We send the whole family — children, parents, and siblings — on a free retreat at a Christian campground. They get time away from difficult hospital days to rest, play, and make memories together.",
   },
   {
-    title: "Play that meets each child",
-    body: "Some kids run the midway. Some play from a chair, a bed, or a lap. We adapt the booth. We don’t ask a child to shrink their joy to fit our setup.",
+    title: "An Every1Camp sports camp",
+    body: "Every1Camp provides free sports camps for children with disabilities. Kids play sports, make friends, and spend the day included. Jacob’s Joy is the fiscal sponsor, and Every1Camp keeps its own name.",
   },
 ];
 
 export function Impact() {
   return (
-    <section id="impact" aria-labelledby="impact-heading" className="bg-cream-deep py-20 md:py-28">
+    <section
+      id="impact"
+      aria-labelledby="impact-heading"
+      className="scroll-mt-28 bg-cream-deep py-20 md:py-28"
+    >
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <SectionLabel>Impact stories</SectionLabel>
+        <SectionLabel>The experiences</SectionLabel>
         <h2
           id="impact-heading"
           className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
         >
-          The joy we keep building.
+          Carnival days, retreats, and sports camps.
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-          We don’t publish polished reviews or invented numbers. We build every
-          program around moments like these. We measure these moments in
-          laughter, prizes won, and parents who got to play. We don’t promise
-          medical results. We create opportunities for play, joy, and connection.
+          Each one gives children and their families a different kind of time
+          together.
         </p>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {stories.map((story) => (
-            <article key={story.title} className="flex h-full flex-col rounded-3xl border-2 border-navy bg-field p-6 sm:p-8">
+            <article
+              key={story.title}
+              className="row-span-3 grid grid-rows-subgrid gap-4 rounded-3xl border-2 border-navy bg-field p-6 sm:p-8"
+            >
               <span className="block h-1 w-12 bg-gold" aria-hidden="true" />
-              <h3 className="mt-5 font-display text-2xl font-bold leading-tight">{story.title}</h3>
-              <p className="mt-4 text-base leading-relaxed">{story.body}</p>
+              <h3 className="font-display text-2xl font-bold leading-tight text-balance">
+                {story.title}
+              </h3>
+              <p className="text-base leading-relaxed">{story.body}</p>
             </article>
           ))}
         </div>

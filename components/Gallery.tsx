@@ -4,7 +4,7 @@ import { gallery } from "@/lib/site";
 
 export function Gallery() {
   return (
-    <section id="gallery" aria-labelledby="gallery-heading" className="bg-cream-deep py-20 md:py-28">
+    <section id="gallery" aria-labelledby="gallery-heading" className="scroll-mt-28 bg-cream-deep py-20 md:py-28">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <SectionLabel>Photo gallery</SectionLabel>
         <h2
@@ -14,9 +14,9 @@ export function Gallery() {
           Real moments. Real smiles.
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-          These are photos of Jacob and his family — play, siblings, parents,
-          and the kind of joy this work exists to share. Not stock photos. Not
-          a staged sad scene. The actual kid.
+          These photos are of Jacob and his family — at home, outside, and in
+          the hospital. His days with his parents and siblings are why this work
+          exists.
         </p>
         <ul className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3">
           {gallery.map((photo) => (

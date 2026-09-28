@@ -1,58 +1,126 @@
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionLabel } from "@/components/SectionLabel";
+import { destination, every1CampUrl, pendingLinks } from "@/lib/site";
 
-const steps = [
+const paths = [
   {
-    title: "Say hello",
-    body: "A parent, hospital, or retreat calls or writes. Tell us who will be there and what you hope the experience feels like.",
+    place: "Hospitals",
+    title: "Bring a Carnival to Your Hospital",
+    body: "Hospital staff can ask Jacob’s Joy to bring a free carnival day. We come with carnival games, activities, entertainment, and prizes for patients, siblings, and parents.",
+    action: "Bring a Carnival to Your Hospital",
+    href: "#contact",
+    interest: "hospital",
+    external: false,
   },
   {
-    title: "We plan the program around your people",
-    body: "Games, pacing, and access are built for the children and families on the list. Seated or standing, from a bed or a booth, the activity comes to the child.",
+    place: "Families",
+    title: "Ask About a Family Retreat",
+    body: "Families facing childhood cancer, disabilities, or other life-altering diseases can ask about a free retreat at a Christian campground. Jacob’s Joy sends children, parents, and siblings for time to rest, play, and make memories together.",
+    action: "Ask About a Family Retreat",
+    href: "#contact",
+    interest: "retreat",
+    external: false,
   },
   {
-    title: "Donors and sponsors cover the cost",
-    body: "Families do not pay. Partners fund the games, prizes, entertainment, travel, and setup. Your only job is to show up.",
+    place: "Every1Camp",
+    title: "Explore Every1Camp",
+    body: "Families looking for free sports camps can visit Every1Camp. Those camps are Every1Camp’s own program. Jacob’s Joy is the fiscal sponsor.",
+    action: "Explore Every1Camp",
+    href: every1CampUrl,
+    interest: undefined,
+    external: true,
+  },
+];
+
+const actions = [
+  {
+    label: "Camp Registration",
+    interest: "camp",
+    ...destination(pendingLinks.campRegistration),
   },
   {
-    title: "Everybody plays",
-    body: "Kids, siblings, and parents. A parent or caregiver comes with every child. No fee at the door. The fullness of childhood.",
+    label: "Sponsor an Event",
+    interest: "sponsor",
+    ...destination(pendingLinks.eventSponsorship),
+  },
+  {
+    label: "Volunteer at an Event",
+    interest: "volunteer",
+    ...destination(pendingLinks.eventVolunteer),
   },
 ];
 
 export function Participate() {
   return (
-    <section id="participate" aria-labelledby="participate-heading" className="py-20 md:py-28">
+    <section
+      id="participate"
+      aria-labelledby="participate-heading"
+      className="scroll-mt-28 py-20 md:py-28"
+    >
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <SectionLabel>How families participate</SectionLabel>
+        <SectionLabel>Next steps</SectionLabel>
         <h2
           id="participate-heading"
           className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
         >
-          From the first hello to meaningful connection.
+          Where do you want to start?
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-          There is no application maze and no bill. We reply Monday through
-          Friday and plan the program with the people who will actually be in
-          the room.
+          Hospital staff, families hoping for a retreat, and families looking
+          for a sports camp each have their own next step.
         </p>
-        <ol className="mt-12 grid gap-6 md:grid-cols-2">
-          {steps.map((step, index) => (
-            <li key={step.title} className="rounded-3xl bg-cream-deep p-6 sm:p-8">
-              <p className="font-display text-5xl font-bold leading-none text-navy">
-                <span className="sr-only">Step </span>
-                {String(index + 1).padStart(2, "0")}
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {paths.map((path) => (
+            <article
+              key={path.title}
+              className="row-span-4 grid grid-rows-subgrid gap-4 rounded-3xl bg-cream-deep p-6 sm:p-8"
+            >
+              <p className="font-ui text-sm font-semibold uppercase tracking-[0.14em] text-muted">
+                {path.place}
               </p>
-              <span className="mt-3 block h-1 w-12 bg-gold" aria-hidden="true" />
-              <h3 className="mt-4 font-display text-2xl font-bold leading-tight">{step.title}</h3>
-              <p className="mt-3 text-base leading-relaxed">{step.body}</p>
-            </li>
+              <h3 className="font-display text-2xl font-bold leading-tight text-balance">
+                {path.title}
+              </h3>
+              <p className="text-base leading-relaxed">{path.body}</p>
+              <ButtonLink
+                href={path.href}
+                interest={path.interest}
+                target={path.external ? "_blank" : undefined}
+                rel={path.external ? "noreferrer" : undefined}
+                variant="navy"
+                className="h-full w-full text-center leading-snug"
+              >
+                {path.action}
+                {path.external ? (
+                  <span className="sr-only"> (opens in a new tab)</span>
+                ) : null}
+              </ButtonLink>
+            </article>
           ))}
-        </ol>
+        </div>
+
         <div className="mt-10">
-          <ButtonLink href="#contact" interest="register" variant="gold">
-            Register a family
-          </ButtonLink>
+          <h3 className="font-display text-2xl font-bold leading-tight">
+            Camp registration, sponsorship, and volunteering
+          </h3>
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {actions.map((action) => (
+              <ButtonLink
+                key={action.label}
+                href={action.href}
+                interest={action.external ? undefined : action.interest}
+                target={action.external ? "_blank" : undefined}
+                rel={action.external ? "noreferrer" : undefined}
+                variant="outline"
+                className="w-full"
+              >
+                {action.label}
+                {action.external ? (
+                  <span className="sr-only"> (opens in a new tab)</span>
+                ) : null}
+              </ButtonLink>
+            ))}
+          </div>
         </div>
       </div>
     </section>

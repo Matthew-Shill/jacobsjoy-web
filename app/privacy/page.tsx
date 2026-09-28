@@ -35,11 +35,12 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-4 text-base leading-relaxed">
             {site.name} is a 501(c)(3) nonprofit based in Pittsford, New York. We
-            create joyful, inclusive experiences for children and families at
-            children’s hospitals and family retreats. We also partner with
-            Every1Camp. Gifts through that partnership help make free inclusive
-            camp experiences accessible to children with disabilities. Jacob’s Joy
-            does not operate those camps. You can reach us at{" "}
+            provide free carnival days at children’s hospitals and free family
+            retreats at Christian campgrounds for children facing cancer, living
+            with disabilities, or battling life-altering diseases. We are also
+            the fiscal sponsor of Every1Camp, which provides free sports camps
+            for children with disabilities. Every1Camp runs those camps. You can
+            reach us at{" "}
             <a className="font-semibold underline underline-offset-4" href={site.emailHref}>
               {site.email}
             </a>{" "}
@@ -57,9 +58,10 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-4 text-base leading-relaxed">
             The contact form asks for your name, email address, and a message.
-            You can also tell us whether you want to register a family, sponsor a
-            program, donate, support Every1Camp, volunteer, or host a program.
-            That choice is optional.
+            You can also tell us whether you want a hospital carnival day, a
+            family retreat, camp registration, to sponsor or volunteer at an
+            event, to donate to Jacob’s Joy, or to support Every1Camp. That
+            choice is optional.
           </p>
           <p className="mt-4 text-base leading-relaxed">
             The form does not save that information on the website. When you
@@ -81,8 +83,9 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-4 text-base leading-relaxed">
             We use what you send to reply, and to plan the thing you wrote about:
-            a program, a gift, a sponsorship, volunteering, support for Every1Camp,
-            or a visit to a hospital or retreat. We do not sell personal
+            a hospital carnival day, a family retreat, camp registration, a gift,
+            an event sponsorship, volunteering, or support for Every1Camp. We do
+            not sell personal
             information. We do not share it with advertisers. We do not use it
             to build a mailing list unless you asked to hear from us.
           </p>
@@ -126,10 +129,11 @@ export default function PrivacyPage() {
             .
           </p>
           <p className="mt-4 text-base leading-relaxed">
-            A separate online gift for Every1Camp is not connected yet. Until
-            that Stripe link is ready, the Every1Camp button opens the same
-            contact note described above. Checks can still be mailed to the
-            address on this page.
+            Support Every1Camp on this website opens a message to Jacob’s Joy so
+            we can direct that gift to Every1Camp. It is separate from a donation
+            to Jacob’s Joy for hospital carnival days and family retreats. Checks
+            can be mailed to the address on this page. Write Every1Camp on the
+            memo line if that is where the gift should go.
           </p>
           <p className="mt-4 text-base leading-relaxed">
             Golf tournament registration and tournament sponsorship open on

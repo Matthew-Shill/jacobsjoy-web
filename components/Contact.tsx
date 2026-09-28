@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="bg-cream-deep py-20 md:py-28">
+    <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28 bg-cream-deep py-20 md:py-28">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-2">
         <div>
           <SectionLabel>Contact</SectionLabel>
@@ -15,8 +15,9 @@ export function Contact() {
             Tell us how you want to be part of it.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted">
-            Families, hospitals, retreats, Every1Camp supporters, volunteers,
-            donors, and sponsors — write or call. A person reads every note.
+            Hospital staff, families asking about a retreat, Every1Camp
+            supporters, volunteers, donors, and event sponsors — write or call.
+            A person reads every note.
           </p>
           <dl className="mt-8 space-y-5 text-base">
             <div>

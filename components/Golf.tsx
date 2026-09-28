@@ -4,7 +4,7 @@ import { golfTournamentUrl } from "@/lib/site";
 
 export function Golf() {
   return (
-    <section id="golf" aria-labelledby="golf-heading" className="bg-navy py-20 text-cream md:py-28">
+    <section id="golf" aria-labelledby="golf-heading" className="scroll-mt-28 bg-navy py-20 text-cream md:py-28">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <SectionLabel onDark>On the course</SectionLabel>
         <h2
@@ -14,8 +14,9 @@ export function Golf() {
           Jacob’s Joy Annual Golf Tournament
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream">
-          Join us on the course to support joyful, inclusive experiences for
-          children and families. Register as a golfer or partner with us as a
+          The tournament raises support for free carnival days at children’s
+          hospitals, free family retreats at Christian campgrounds, and our
+          partnership with Every1Camp. Register as a golfer or become a
           tournament sponsor.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

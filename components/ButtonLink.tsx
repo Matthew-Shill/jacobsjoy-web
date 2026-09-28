@@ -31,7 +31,7 @@ export function ButtonLink({
     <a
       href={href}
       data-interest={interest}
-      className={`inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-center font-ui text-base font-semibold leading-none tracking-wide ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-center font-ui text-base font-semibold leading-snug tracking-wide ${variants[variant]} ${className}`}
       {...rest}
     >
       {children}

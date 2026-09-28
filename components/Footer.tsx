@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { SocialIcon } from "@/components/Icons";
-import { nav, site, socials } from "@/lib/site";
+import { destination, nav, pendingLinks, site, socials } from "@/lib/site";
+
+const sponsor = destination(pendingLinks.eventSponsorship);
+const volunteer = destination(pendingLinks.eventVolunteer);
+const camp = destination(pendingLinks.campRegistration);
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -41,7 +45,7 @@ export function Footer() {
             </li>
             <li>
               <a className="text-base underline-offset-4 hover:underline" href="/#participate">
-                Events and registration
+                Next steps
               </a>
             </li>
           </ul>
@@ -52,22 +56,50 @@ export function Footer() {
           <ul className="mt-4 space-y-2">
             <li>
               <a className="text-base underline-offset-4 hover:underline" href="/#donate">
-                Donate
+                Donate to Jacob’s Joy
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="sponsor">
-                Sponsors and partners
+              <a className="text-base underline-offset-4 hover:underline" href="/#support-every1camp">
+                Support Every1Camp
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="volunteer">
-                Volunteer
+              <a
+                className="text-base underline-offset-4 hover:underline"
+                href={sponsor.external ? sponsor.href : "/#contact"}
+                data-interest={sponsor.external ? undefined : "sponsor"}
+                target={sponsor.external ? "_blank" : undefined}
+                rel={sponsor.external ? "noreferrer" : undefined}
+              >
+                Sponsor an Event
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="register">
-                Register a family
+              <a
+                className="text-base underline-offset-4 hover:underline"
+                href={volunteer.external ? volunteer.href : "/#contact"}
+                data-interest={volunteer.external ? undefined : "volunteer"}
+                target={volunteer.external ? "_blank" : undefined}
+                rel={volunteer.external ? "noreferrer" : undefined}
+              >
+                Volunteer at an Event
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-base underline-offset-4 hover:underline"
+                href={camp.external ? camp.href : "/#contact"}
+                data-interest={camp.external ? undefined : "camp"}
+                target={camp.external ? "_blank" : undefined}
+                rel={camp.external ? "noreferrer" : undefined}
+              >
+                Camp Registration
+              </a>
+            </li>
+            <li>
+              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="retreat">
+                Ask About a Family Retreat
               </a>
             </li>
           </ul>

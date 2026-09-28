@@ -15,8 +15,8 @@ export default function HomePage() {
     <main id="main" tabIndex={-1} className="flex-1 outline-none">
       <div id="top" />
       <Hero />
-      <Story />
       <Programs />
+      <Story />
       <Participate />
       <Impact />
       <Funding />

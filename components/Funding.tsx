@@ -1,17 +1,19 @@
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionLabel } from "@/components/SectionLabel";
-import { donations, site } from "@/lib/site";
+import { destination, donations, pendingLinks, site } from "@/lib/site";
 
 const covered = [
-  "Games and activities",
-  "Prizes children want to take home",
-  "Entertainment",
-  "Travel and setup, so the carnival can come to them",
+  "Carnival games, activities, entertainment, and prizes",
+  "Family retreats at Christian campgrounds",
+  "Travel and setup for hospital carnival days",
 ];
+
+const sponsor = destination(pendingLinks.eventSponsorship);
+const every1CampGift = destination(donations.every1Camp);
 
 export function Funding() {
   return (
-    <section id="funding" aria-labelledby="funding-heading" className="py-20 md:py-28">
+    <section id="funding" aria-labelledby="funding-heading" className="scroll-mt-28 py-20 md:py-28">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
         <div>
           <SectionLabel>Donors and sponsors</SectionLabel>
@@ -19,22 +21,22 @@ export function Funding() {
             id="funding-heading"
             className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
           >
-            Donors and sponsors fully fund every event.
+            Donors and sponsors fund carnival days and family retreats.
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed">
             <p>
-              Families never see a bill. That is the whole model. Gifts and
-              sponsorships pay for the carnival so a parent can say yes without
-              doing math in a hospital hallway.
+              Your support helps bring free carnival days to children’s hospitals
+              and send families on free retreats at Christian campgrounds across
+              the country. You help give children and their families time to have
+              fun, rest, and make memories together without the financial burden.
             </p>
             <p>
               Jacob’s Joy, Inc. is a 501(c)(3) nonprofit. Donations are
-              tax-deductible and go to putting on free events for children and
-              their families.
+              tax-deductible.
             </p>
           </div>
           <h3 className="mt-8 font-ui text-sm font-semibold uppercase tracking-[0.18em]">
-            A gift covers
+            A gift to Jacob’s Joy covers
           </h3>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {covered.map((item) => (
@@ -43,14 +45,33 @@ export function Funding() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-base leading-relaxed">
-            Want to put your family or company behind a program? Tell us. You
-            fund games, prizes, entertainment, and accessible experiences.
-            Families just show up.
-          </p>
-          <div id="donate" className="mt-8">
-            <h3 className="font-display text-3xl font-bold leading-tight">Choose a gift</h3>
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+
+          <div id="donate" className="scroll-mt-28 mt-10">
+            <h3 className="font-display text-3xl font-bold leading-tight">
+              Two ways to give
+            </h3>
+            <p className="mt-4 text-base leading-relaxed">
+              A donation to Jacob’s Joy supports hospital carnival days and
+              family retreats.
+            </p>
+            <div
+              id="support-every1camp"
+              className="scroll-mt-28 mt-6 rounded-3xl bg-cream-deep p-6"
+            >
+              <h4 className="font-display text-2xl font-bold leading-tight">
+                Every1Camp is a separate gift
+              </h4>
+              <p className="mt-3 text-base leading-relaxed">
+                Jacob’s Joy is the fiscal sponsor of Every1Camp. Choose Support
+                Every1Camp when you want the donation directed to Every1Camp’s
+                free sports camps for children with disabilities. That gift is
+                different from support for Jacob’s Joy hospital carnival days
+                and family retreats. At those camps, kids play sports, make
+                friends, and spend a day included. Every1Camp keeps its own name
+                and runs the camps.
+              </p>
+            </div>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 href={donations.oneTime}
                 target="_blank"
@@ -58,52 +79,48 @@ export function Funding() {
                 variant="gold"
                 className="w-full sm:w-auto"
               >
-                Make a One-Time Gift
+                Donate to Jacob’s Joy
                 <span className="sr-only"> (opens in a new tab)</span>
               </ButtonLink>
               <ButtonLink
-                href={donations.monthly}
-                target="_blank"
-                rel="noreferrer"
+                href={every1CampGift.href}
+                interest={every1CampGift.external ? undefined : "every1camp"}
+                target={every1CampGift.external ? "_blank" : undefined}
+                rel={every1CampGift.external ? "noreferrer" : undefined}
                 variant="navy"
                 className="w-full sm:w-auto"
               >
-                Become a Monthly Partner
-                <span className="sr-only"> (opens in a new tab)</span>
+                Support Every1Camp
+                {every1CampGift.external ? (
+                  <span className="sr-only"> (opens in a new tab)</span>
+                ) : null}
               </ButtonLink>
             </div>
+            <p className="mt-4 text-base leading-relaxed">
+              <a
+                className="font-semibold underline underline-offset-4"
+                href={donations.monthly}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Become a monthly partner
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>{" "}
+              of Jacob’s Joy.
+            </p>
             <div className="mt-5">
-              {donations.every1Camp ? (
-                <ButtonLink
-                  href={donations.every1Camp}
-                  target="_blank"
-                  rel="noreferrer"
-                  variant="outline"
-                  className="w-full sm:w-auto"
-                >
-                  Donate to Every1Camp Through Jacob’s Joy
+              <ButtonLink
+                href={sponsor.href}
+                interest={sponsor.external ? undefined : "sponsor"}
+                target={sponsor.external ? "_blank" : undefined}
+                rel={sponsor.external ? "noreferrer" : undefined}
+                variant="outline"
+                className="w-full sm:w-auto"
+              >
+                Sponsor an Event
+                {sponsor.external ? (
                   <span className="sr-only"> (opens in a new tab)</span>
-                </ButtonLink>
-              ) : (
-                <>
-                  <ButtonLink
-                    href="#contact"
-                    interest="every1camp"
-                    variant="outline"
-                    className="w-full sm:w-auto"
-                  >
-                    Donate to Every1Camp Through Jacob’s Joy
-                  </ButtonLink>
-                  <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
-                    The online payment link for Every1Camp is not connected yet.
-                    Until it is, this button opens a note to Jacob’s Joy.
-                  </p>
-                </>
-              )}
-            </div>
-            <div className="mt-5">
-              <ButtonLink href="#contact" interest="sponsor" variant="outline" className="w-full sm:w-auto">
-                Sponsor a program
+                ) : null}
               </ButtonLink>
             </div>
           </div>
@@ -122,8 +139,10 @@ export function Funding() {
             {site.cityLine}
           </address>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            Include your contact information so we can send a receipt. Sizable
-            gifts are easiest by check.
+            Include your contact information so we can send a receipt. If the
+            gift should go to Every1Camp, write Every1Camp on the memo line.
+            Otherwise the gift supports hospital carnival days and family
+            retreats.
           </p>
           <p className="mt-4 font-ui text-sm font-semibold uppercase tracking-[0.14em] text-muted">
             EIN {site.ein}
