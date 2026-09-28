@@ -4,13 +4,13 @@ import { SectionLabel } from "@/components/SectionLabel";
 const programs = [
   {
     place: "Children’s hospitals",
-    title: "A midway that meets children where they are",
+    title: "Joy that meets children where they are",
     body: "Games, activities, entertainment, and prizes come to the hospital — a playroom, a common space, or the bedside. Children play at their own pace. Siblings get a turn. Parents get to be in the game.",
   },
   {
     place: "Family retreats",
-    title: "The whole family, one carnival",
-    body: "Retreats are for parents, children, and siblings on the same team. The carnival gives everyone a shared win — a game, a prize, a story to retell on the way home.",
+    title: "Free retreats at Christian campgrounds",
+    body: "Families go, free of charge, to Christian campgrounds across the country. Parents, children, and siblings share the trip — the same week, the same place, and nothing owed when it’s over.",
   },
 ];
 
@@ -40,11 +40,11 @@ export function Programs() {
           illnesses — and for the siblings and parents who are in it with them.
         </p>
 
-        <div className="relative mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="relative mt-12 grid items-stretch gap-6 lg:grid-cols-2">
           {programs.map((program, index) => (
             <article
               key={program.place}
-              className="relative flex h-full flex-col rounded-3xl bg-cream p-6 text-navy sm:p-8"
+              className="relative flex flex-col rounded-3xl bg-cream p-6 text-navy sm:p-8"
             >
               <p className="flex items-center gap-3 font-ui text-sm font-semibold uppercase tracking-[0.14em] text-muted">
                 <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-gold font-bold text-navy">
@@ -52,7 +52,7 @@ export function Programs() {
                 </span>
                 {program.place}
               </p>
-              <h3 className="mt-4 font-display text-3xl font-bold leading-tight">
+              <h3 className="mt-4 font-display text-3xl font-bold leading-tight lg:min-h-[2.5em]">
                 {program.title}
               </h3>
               <p className="mt-4 flex-1 text-base leading-relaxed">{program.body}</p>
