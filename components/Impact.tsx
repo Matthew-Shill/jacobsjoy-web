@@ -10,7 +10,7 @@ const stories = [
     body: "Moms and dads are not asked to stand against the wall and supervise. The games are for them, too. A family that plays together gets a memory that isn’t about an appointment.",
   },
   {
-    title: "Play that fits the day",
+    title: "Play that meets each child",
     body: "Some kids run the midway. Some play from a chair, a bed, or a lap. We adapt the booth. We don’t ask a child to shrink their joy to fit our setup.",
   },
 ];
@@ -24,13 +24,13 @@ export function Impact() {
           id="impact-heading"
           className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
         >
-          The day we keep building.
+          The joy we keep building.
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
           We don’t publish polished reviews or invented numbers. We build every
-          carnival around moments like these. We measure the day in laughter,
-          prizes won, and parents who got to play. We don’t promise medical
-          results. We promise a carnival.
+          program around moments like these. We measure these moments in
+          laughter, prizes won, and parents who got to play. We don’t promise
+          medical results. We create opportunities for play, joy, and connection.
         </p>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {stories.map((story) => (

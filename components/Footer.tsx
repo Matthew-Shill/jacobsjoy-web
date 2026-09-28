@@ -35,8 +35,8 @@ export function Footer() {
               </li>
             ))}
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#programs">
-                Carnival days
+              <a className="text-base underline-offset-4 hover:underline" href="/#golf">
+                Golf tournament
               </a>
             </li>
             <li>
@@ -51,12 +51,12 @@ export function Footer() {
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.18em]">Get involved</p>
           <ul className="mt-4 space-y-2">
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#funding" data-interest="donate">
+              <a className="text-base underline-offset-4 hover:underline" href="/#donate">
                 Donate
               </a>
             </li>
             <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#funding" data-interest="sponsor">
+              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="sponsor">
                 Sponsors and partners
               </a>
             </li>

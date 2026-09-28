@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 const facts = [
   "Free for every family",
-  "Hospitals, camps, and retreats",
+  "Hospitals, retreats, and Every1Camp",
   "Nationwide",
 ];
 
@@ -24,29 +24,26 @@ export function Hero() {
             id="hero-heading"
             className="mt-5 font-display text-[2.6rem] font-bold leading-[1.08] tracking-tight sm:text-6xl"
           >
-            Every child deserves a day that feels like childhood.
+            Every child deserves the fullness of childhood.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            {site.tagline} We bring free carnival days — games, activities,
-            entertainment, and prizes — to children’s hospitals, camps, and
-            family retreats.
+            {site.tagline} We create joyful, inclusive experiences — games,
+            activities, entertainment, and prizes — for children and families at
+            hospitals and retreats. Through our partnership with Every1Camp,
+            gifts can help make free inclusive camp experiences accessible to
+            children with disabilities.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink
-              href="#funding"
-              interest="donate"
-              variant="gold"
-              className="w-full sm:w-auto"
-            >
+            <ButtonLink href="#donate" variant="gold" className="w-full sm:w-auto">
               Donate
             </ButtonLink>
             <ButtonLink
-              href="#funding"
+              href="#contact"
               interest="sponsor"
               variant="navy"
               className="w-full sm:w-auto"
             >
-              Sponsor a day
+              Sponsor a program
             </ButtonLink>
             <ButtonLink
               href="#contact"

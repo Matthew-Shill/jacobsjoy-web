@@ -4,10 +4,10 @@ import { SectionLabel } from "@/components/SectionLabel";
 const steps = [
   {
     title: "Say hello",
-    body: "A parent, hospital, camp, or retreat calls or writes. Tell us who will be there and what you hope the day feels like.",
+    body: "A parent, hospital, or retreat calls or writes. Tell us who will be there and what you hope the experience feels like.",
   },
   {
-    title: "We plan the carnival around your people",
+    title: "We plan the program around your people",
     body: "Games, pacing, and access are built for the children and families on the list. Seated or standing, from a bed or a booth, the activity comes to the child.",
   },
   {
@@ -16,7 +16,7 @@ const steps = [
   },
   {
     title: "Everybody plays",
-    body: "Kids, siblings, and parents. A parent or caregiver comes with every child. No fee at the door. A day that feels like childhood.",
+    body: "Kids, siblings, and parents. A parent or caregiver comes with every child. No fee at the door. The fullness of childhood.",
   },
 ];
 
@@ -29,11 +29,11 @@ export function Participate() {
           id="participate-heading"
           className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
         >
-          From the first hello to a day of play.
+          From the first hello to meaningful connection.
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
           There is no application maze and no bill. We reply Monday through
-          Friday and plan the carnival with the people who will actually be in
+          Friday and plan the program with the people who will actually be in
           the room.
         </p>
         <ol className="mt-12 grid gap-6 md:grid-cols-2">

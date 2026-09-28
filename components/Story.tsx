@@ -38,10 +38,10 @@ export function Story() {
               <p>
                 We serve children facing cancer, disabilities, and other serious
                 illnesses, and we serve the siblings and parents beside them.
-                Every carnival is free, adaptive, and inclusive. A parent or
+                Every program is free, adaptive, and inclusive. A parent or
                 caregiver comes with every child. Nobody has to earn a place in
-                the fun, and we never promise a medical result. We promise a day
-                of play.
+                the fun, and we never promise a medical result. We create
+                opportunities for play, joy, and connection.
               </p>
             </div>
             <blockquote className="mt-8 border-l-4 border-gold pl-5">
@@ -69,9 +69,6 @@ export function Story() {
                 sizes="(min-width: 1024px) 520px, 100vw"
                 className="h-auto w-full rounded-[1.75rem]"
               />
-              <figcaption className="mt-3 font-ui text-base text-muted">
-                {storyPhotos.portrait.caption}
-              </figcaption>
             </figure>
             <figure>
               <Image
@@ -82,9 +79,6 @@ export function Story() {
                 sizes="(min-width: 640px) 240px, 100vw"
                 className="h-auto w-full rounded-2xl"
               />
-              <figcaption className="mt-3 font-ui text-base text-muted">
-                {storyPhotos.carving.caption}
-              </figcaption>
             </figure>
             <figure>
               <Image
@@ -95,9 +89,6 @@ export function Story() {
                 sizes="(min-width: 640px) 240px, 100vw"
                 className="h-auto w-full rounded-2xl"
               />
-              <figcaption className="mt-3 font-ui text-base text-muted">
-                {storyPhotos.ily.caption}
-              </figcaption>
             </figure>
           </div>
         </div>

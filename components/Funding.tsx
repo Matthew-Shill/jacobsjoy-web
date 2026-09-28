@@ -1,6 +1,6 @@
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionLabel } from "@/components/SectionLabel";
-import { site } from "@/lib/site";
+import { donations, site } from "@/lib/site";
 
 const covered = [
   "Games and activities",
@@ -44,16 +44,68 @@ export function Funding() {
             ))}
           </ul>
           <p className="mt-6 text-base leading-relaxed">
-            Want to put your family or company on a carnival day? Tell us. We’ll
-            say what that day needs. You fund it. Families just show up.
+            Want to put your family or company behind a program? Tell us. You
+            fund games, prizes, entertainment, and accessible experiences.
+            Families just show up.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink href="#contact" interest="donate" variant="gold" className="w-full sm:w-auto">
-              Donate
-            </ButtonLink>
-            <ButtonLink href="#contact" interest="sponsor" variant="navy" className="w-full sm:w-auto">
-              Sponsor a day
-            </ButtonLink>
+          <div id="donate" className="mt-8">
+            <h3 className="font-display text-3xl font-bold leading-tight">Choose a gift</h3>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ButtonLink
+                href={donations.oneTime}
+                target="_blank"
+                rel="noreferrer"
+                variant="gold"
+                className="w-full sm:w-auto"
+              >
+                Make a One-Time Gift
+                <span className="sr-only"> (opens in a new tab)</span>
+              </ButtonLink>
+              <ButtonLink
+                href={donations.monthly}
+                target="_blank"
+                rel="noreferrer"
+                variant="navy"
+                className="w-full sm:w-auto"
+              >
+                Become a Monthly Partner
+                <span className="sr-only"> (opens in a new tab)</span>
+              </ButtonLink>
+            </div>
+            <div className="mt-5">
+              {donations.every1Camp ? (
+                <ButtonLink
+                  href={donations.every1Camp}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="outline"
+                  className="w-full sm:w-auto"
+                >
+                  Donate to Every1Camp Through Jacob’s Joy
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </ButtonLink>
+              ) : (
+                <>
+                  <ButtonLink
+                    href="#contact"
+                    interest="every1camp"
+                    variant="outline"
+                    className="w-full sm:w-auto"
+                  >
+                    Donate to Every1Camp Through Jacob’s Joy
+                  </ButtonLink>
+                  <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
+                    The online payment link for Every1Camp is not connected yet.
+                    Until it is, this button opens a note to Jacob’s Joy.
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="mt-5">
+              <ButtonLink href="#contact" interest="sponsor" variant="outline" className="w-full sm:w-auto">
+                Sponsor a program
+              </ButtonLink>
+            </div>
           </div>
         </div>
 

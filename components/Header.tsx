@@ -52,17 +52,17 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <ButtonLink href="/#funding" interest="donate" variant="gold">
+          <ButtonLink href="/#donate" variant="gold">
             Donate
           </ButtonLink>
         </nav>
 
         <div className="flex items-center gap-2 lg:hidden">
           <ButtonLink
-            href="/#funding"
-            interest="donate"
+            href="/#donate"
             variant="gold"
             className="px-4"
+            onClick={() => setOpen(false)}
           >
             Donate
           </ButtonLink>

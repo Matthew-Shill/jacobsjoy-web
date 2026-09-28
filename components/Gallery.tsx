@@ -11,7 +11,7 @@ export function Gallery() {
           id="gallery-heading"
           className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
         >
-          Real days. Real smiles.
+          Real moments. Real smiles.
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
           These are photos of Jacob and his family — play, siblings, parents,
@@ -30,9 +30,6 @@ export function Gallery() {
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                   className="h-auto w-full rounded-2xl"
                 />
-                <figcaption className="px-2 py-3 font-ui text-base leading-snug text-navy">
-                  {photo.caption}
-                </figcaption>
               </figure>
             </li>
           ))}

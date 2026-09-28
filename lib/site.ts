@@ -26,7 +26,7 @@ export const site = {
   street: "33 Le Pere Drive",
   cityLine: "Pittsford, NY 14534",
   hours: "Monday–Friday, 9 a.m.–5 p.m. Eastern",
-  hoursNote: "Carnival times follow the hospital, camp, or retreat.",
+  hoursNote: "Program times follow the hospital or retreat.",
   ein: "39-4229056",
   url: "https://jacobsjoyinc.com",
   // This app is deployed here until jacobsjoyinc.com (still WordPress) points
@@ -64,12 +64,28 @@ export const socials = [
 
 export const interests = [
   { value: "register", label: "Register a family" },
-  { value: "sponsor", label: "Sponsor a carnival day" },
+  { value: "sponsor", label: "Sponsor a program" },
   { value: "donate", label: "Donate" },
+  { value: "every1camp", label: "Support Every1Camp" },
   { value: "volunteer", label: "Volunteer" },
-  { value: "partner", label: "Host a carnival (hospital, camp, or retreat)" },
+  { value: "partner", label: "Host a program (hospital or retreat)" },
   { value: "other", label: "Something else" },
 ] as const;
+
+/** Payment links from the current Jacob’s Joy donation page. */
+export const donations = {
+  oneTime: "https://buy.stripe.com/5kQ3cx1LWeED49A71tdEs00",
+  monthly: "https://donate.stripe.com/9B6eVf4Y8dAzbC2dpRdEs01",
+  /**
+   * Stripe payment link for Every1Camp gifts through Jacob’s Joy.
+   * Leave empty until that link exists. The button then opens the contact form.
+   */
+  every1Camp: "",
+} as const;
+
+/** Current GolfStatus event page, already used on jacobsjoyinc.com. */
+export const golfTournamentUrl =
+  "https://events.golfstatus.com/event/jacobs-joy-inc";
 
 export type InterestValue = (typeof interests)[number]["value"];
 
@@ -84,7 +100,7 @@ export const videos = [
     id: "oPkEuzh_DDI",
     title:
       "Jacob’s Joy Channel 13 Interview | Spreading Joy to Families in Need",
-    caption: "A Channel 13 interview about showing up for families with a day of play.",
+    caption: "A Channel 13 interview about showing up for families with play, joy, and connection.",
     href: "https://youtu.be/oPkEuzh_DDI",
   },
 ] as const;

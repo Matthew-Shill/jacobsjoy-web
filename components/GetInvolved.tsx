@@ -2,34 +2,44 @@ import { SectionLabel } from "@/components/SectionLabel";
 
 const ways = [
   {
-    interest: "donate",
+    href: "#donate",
     title: "Donate",
-    body: "Any amount keeps a booth open. Gifts are tax-deductible and go to free events for children and their families.",
+    body: "Any amount helps fund games, prizes, and accessible experiences. Gifts are tax-deductible and go to free programs for children and their families.",
     action: "Give",
   },
   {
+    href: "#contact",
     interest: "sponsor",
-    title: "Sponsor a carnival day",
-    body: "Underwrite one day. You cover games, prizes, entertainment, and the cost of showing up. Families see joy, not an invoice.",
+    title: "Sponsor a program",
+    body: "Help fund games, prizes, entertainment, and accessible experiences. Families see joy, not an invoice.",
     action: "Sponsor",
   },
   {
+    href: "#contact",
     interest: "volunteer",
     title: "Volunteer",
     body: "Run a game, greet a family, or help prizes find the right hands. Come glad to be there. That’s the job.",
     action: "Volunteer",
   },
   {
+    href: "#contact",
     interest: "register",
     title: "Register a family",
-    body: "Parents and caregivers: tell us about your child, your siblings, and the day you need. A caregiver attends with every child.",
+    body: "Parents and caregivers: tell us about your child, your siblings, and the experience you need. A caregiver attends with every child.",
     action: "Register",
   },
   {
+    href: "#contact",
     interest: "partner",
-    title: "Host a carnival",
-    body: "Hospitals, camps, and family retreats: if you have the families, we bring the carnival. Tell us the space, the day, and what the kids love.",
+    title: "Host a program",
+    body: "Hospitals and family retreats: if you have the families, we bring games, prizes, and a place to play together. Tell us the space and what the kids love.",
     action: "Partner with us",
+  },
+  {
+    href: "#every1camp",
+    title: "Support Every1Camp",
+    body: "Jacob’s Joy fiscally sponsors Every1Camp. Gifts through that partnership help make free inclusive camp experiences accessible to children with disabilities.",
+    action: "Learn About Every1Camp",
   },
 ];
 
@@ -50,12 +60,12 @@ export function GetInvolved() {
         </p>
         <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {ways.map((way) => (
-            <li key={way.interest} className="flex h-full flex-col rounded-3xl bg-navy p-6 text-cream sm:p-8">
+            <li key={way.title} className="flex h-full flex-col rounded-3xl bg-navy p-6 text-cream sm:p-8">
               <h3 className="font-display text-2xl font-bold leading-tight">{way.title}</h3>
               <p className="mt-3 flex-1 text-base leading-relaxed text-cream">{way.body}</p>
               <a
-                href="#contact"
-                data-interest={way.interest}
+                href={way.href}
+                data-interest={"interest" in way ? way.interest : undefined}
                 className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-gold px-5 font-ui text-base font-semibold text-navy hover:bg-gold-deep"
               >
                 {way.action}
