@@ -17,23 +17,25 @@ export function Story() {
             </h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed">
               <p>
-                Jacob Linn was a sweet, loving boy who treated an ordinary day
-                like it was the main event. He loved superheroes and Paw Patrol.
-                He read his Bible. He wrestled his dad. Before bed he pulled his
-                siblings into dance parties loud enough to spend every last bit
-                of energy.
+                Jacob Linn was a sweet and loving boy whose faith and joy touched
+                every heart around him. At only four years old, Jacob was
+                diagnosed with medulloblastoma, a rare and aggressive form of
+                brain cancer.
               </p>
               <p>
-                When he was four, his family learned he had brain cancer. On
-                September 21, 2021 — the day before his sixth birthday — Jacob
-                was called home to heaven, surrounded by the people who knew his
-                laugh best.
+                Jacob loved superheroes, Paw Patrol, and reading his Bible. Jacob
+                found happiness in simple moments with his family, from wrestling
+                with his dad to lively dance parties with his siblings before
+                bedtime as they tried to get all their energy out.
               </p>
               <p>
-                Jacob’s Joy, Inc. was created in his memory. The work today is
-                free carnival days at children’s hospitals, free family retreats,
-                and support for free sports camps through our partnership with
-                Every1Camp.
+                On September 21, 2021, one day before his sixth birthday, Jacob
+                was called home to Heaven. Surrounded by his family, he exchanged
+                suffering for perfect joy in the presence of the Lord.
+              </p>
+              <p>
+                Jacob’s Joy, Inc. was created in his memory to share that same
+                joy and hope with children and families facing their own battles.
               </p>
             </div>
             <div className="mt-8">

@@ -29,7 +29,7 @@ const programs = [
     place: "Partnership with Every1Camp",
     title: "Free sports camps through Every1Camp",
     body: "Jacob’s Joy partners with Every1Camp to support free sports camps for children with disabilities. These camps give kids opportunities to play sports, make friends, and experience the joy of being included.",
-    action: "Every1Camp Registration",
+    action: "Learn About Every1Camp",
     href: registration.href,
     interest: registration.external ? undefined : "camp",
     external: registration.external,

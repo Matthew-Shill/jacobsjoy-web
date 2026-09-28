@@ -24,7 +24,7 @@ export function Hero() {
             id="hero-heading"
             className="mt-5 font-display text-[2.6rem] font-bold leading-[1.08] tracking-tight sm:text-6xl"
           >
-            Every child deserves the fullness of childhood.
+            Creating joy when families need it most
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             Jacob’s Joy provides free carnival days at children’s hospitals and

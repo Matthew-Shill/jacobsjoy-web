@@ -11,13 +11,8 @@ export function Gallery() {
           id="gallery-heading"
           className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl"
         >
-          Real moments. Real smiles.
+          The Joy of the Lord was Jacob’s Strength
         </h2>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-          These photos are of Jacob and his family — at home, outside, and in
-          the hospital. His days with his parents and siblings are why this work
-          exists.
-        </p>
         <ul className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3">
           {gallery.map((photo) => (
             <li key={photo.src} className="mb-5 break-inside-avoid">

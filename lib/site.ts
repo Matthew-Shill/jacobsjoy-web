@@ -79,7 +79,7 @@ export const interests = [
  * page and opens the contact form.
  */
 export const pendingLinks = {
-  campRegistration: "",
+  campRegistration: "https://www.every1camp.com",
   eventSponsorship: "",
   eventVolunteer: "",
 } as const;
