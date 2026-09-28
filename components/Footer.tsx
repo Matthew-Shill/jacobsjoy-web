@@ -1,17 +1,13 @@
 import Image from "next/image";
 import { SocialIcon } from "@/components/Icons";
-import { destination, nav, pendingLinks, site, socials } from "@/lib/site";
-
-const sponsor = destination(pendingLinks.eventSponsorship);
-const volunteer = destination(pendingLinks.eventVolunteer);
-const camp = destination(pendingLinks.campRegistration);
+import { nav, site, socials } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-navy/10 bg-cream">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-3">
         <div className="lg:col-span-1">
           <a href="/#top" className="inline-flex items-center gap-3">
             <Image
@@ -43,67 +39,8 @@ export function Footer() {
                 Golf tournament
               </a>
             </li>
-            <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#participate">
-                Next steps
-              </a>
-            </li>
           </ul>
         </nav>
-
-        <div>
-          <p className="font-ui text-xs font-semibold uppercase tracking-[0.18em]">Get involved</p>
-          <ul className="mt-4 space-y-2">
-            <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#donate">
-                Donate to Jacob’s Joy
-              </a>
-            </li>
-            <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#support-every1camp">
-                Support Every1Camp
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-base underline-offset-4 hover:underline"
-                href={sponsor.external ? sponsor.href : "/#contact"}
-                data-interest={sponsor.external ? undefined : "sponsor"}
-                target={sponsor.external ? "_blank" : undefined}
-                rel={sponsor.external ? "noreferrer" : undefined}
-              >
-                Sponsor an Event
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-base underline-offset-4 hover:underline"
-                href={volunteer.external ? volunteer.href : "/#contact"}
-                data-interest={volunteer.external ? undefined : "volunteer"}
-                target={volunteer.external ? "_blank" : undefined}
-                rel={volunteer.external ? "noreferrer" : undefined}
-              >
-                Volunteer at an Event
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-base underline-offset-4 hover:underline"
-                href={camp.external ? camp.href : "/#contact"}
-                data-interest={camp.external ? undefined : "camp"}
-                target={camp.external ? "_blank" : undefined}
-                rel={camp.external ? "noreferrer" : undefined}
-              >
-                Camp Registration
-              </a>
-            </li>
-            <li>
-              <a className="text-base underline-offset-4 hover:underline" href="/#contact" data-interest="retreat">
-                Ask About a Family Retreat
-              </a>
-            </li>
-          </ul>
-        </div>
 
         <div>
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.18em]">Contact</p>

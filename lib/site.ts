@@ -16,7 +16,7 @@ export const site = {
   name: "Jacob’s Joy, Inc.",
   shortName: "Jacob’s Joy",
   tagline:
-    "Free carnival days at children’s hospitals, free family retreats at Christian campgrounds, and a partnership with Every1Camp.",
+    "Free carnival days at children’s hospitals, free family retreats, and a partnership with Every1Camp.",
   mission:
     "Jacob’s Joy, Inc. exists to bring light, laughter, and lasting memories to children facing cancer, living with disabilities, and those courageously battling life-altering diseases. Through free carnival days at children’s hospitals and free family retreats we create spaces where kids and their families can experience joy, community, and the freedom of play. Guided by compassion and inclusion, our mission is to lift burdens, and remind families that they are never alone.",
   phoneDisplay: "(585) 451-6244",
@@ -26,7 +26,7 @@ export const site = {
   street: "33 Le Pere Drive",
   cityLine: "Pittsford, NY 14534",
   hours: "Monday–Friday, 9 a.m.–5 p.m. Eastern",
-  hoursNote: "Event times follow the hospital, campground, or camp.",
+  hoursNote: "Event times follow the hospital, retreat, or camp.",
   ein: "39-4229056",
   url: "https://jacobsjoyinc.com",
   // This app is deployed here until jacobsjoyinc.com (still WordPress) points
@@ -65,16 +65,13 @@ export const socials = [
 export const interests = [
   { value: "hospital", label: "Bring a Carnival to Your Hospital" },
   { value: "retreat", label: "Ask About a Family Retreat" },
-  { value: "camp", label: "Camp Registration" },
-  { value: "sponsor", label: "Sponsor an Event" },
-  { value: "volunteer", label: "Volunteer at an Event" },
+  { value: "camp", label: "Every1Camp Registration" },
+  { value: "sponsor", label: "Sponsor a Carnival or Retreat" },
+  { value: "volunteer", label: "Volunteer at a Hospital Carnival" },
   { value: "donate", label: "Donate to Jacob’s Joy" },
   { value: "every1camp", label: "Support Every1Camp" },
   { value: "other", label: "Something else" },
 ] as const;
-
-/** Every1Camp’s own site, kept separate from Jacob’s Joy. */
-export const every1CampUrl = "https://every1camp.com/";
 
 /**
  * Camp registration, event sponsorship, and event volunteering.

@@ -28,7 +28,7 @@ const dmSans = DM_Sans({
 
 const title = "Jacob’s Joy, Inc. | Carnivals, Retreats, and Every1Camp";
 const description =
-  "Jacob’s Joy provides free carnival days at children’s hospitals, free family retreats at Christian campgrounds, and supports free sports camps for children with disabilities through Every1Camp.";
+  "Jacob’s Joy provides free carnival days at children’s hospitals, free family retreats, and supports free sports camps for children with disabilities through a partnership with Every1Camp.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.hostedUrl),

@@ -15,9 +15,8 @@ export function Golf() {
         </h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream">
           The tournament raises support for free carnival days at children’s
-          hospitals, free family retreats at Christian campgrounds, and our
-          partnership with Every1Camp. Register as a golfer or become a
-          tournament sponsor.
+          hospitals, free family retreats, and our partnership with Every1Camp.
+          Register as a golfer or become a tournament sponsor.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <ButtonLink

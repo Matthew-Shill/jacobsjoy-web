@@ -1,14 +1,12 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
-import { destination, pendingLinks } from "@/lib/site";
+import { HeroTicket } from "@/components/HeroTicket";
 
 const facts = [
   "Free for every family",
   "Hospitals, retreats, and Every1Camp",
   "Nationwide",
 ];
-
-const sponsor = destination(pendingLinks.eventSponsorship);
 
 export function Hero() {
   return (
@@ -30,37 +28,15 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             Jacob’s Joy provides free carnival days at children’s hospitals and
-            free family retreats at Christian campgrounds across the country for
-            children facing cancer, living with disabilities, or battling
-            life-altering diseases. We give kids and their families opportunities
-            to rest, play, and make memories together. Through our partnership
-            with Every1Camp, we also support free sports camps for children with
-            disabilities.
+            free family retreats for children facing cancer, living with
+            disabilities, or battling life-altering diseases. We give kids and
+            their families opportunities to rest, play, and make memories
+            together. Through our partnership with Every1Camp, we also support
+            free sports camps for children with disabilities.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <ButtonLink href="#donate" variant="gold" className="w-full sm:w-auto">
-              Donate to Jacob’s Joy
-            </ButtonLink>
-            <ButtonLink
-              href={sponsor.href}
-              interest={sponsor.external ? undefined : "sponsor"}
-              target={sponsor.external ? "_blank" : undefined}
-              rel={sponsor.external ? "noreferrer" : undefined}
-              variant="navy"
-              className="w-full sm:w-auto"
-            >
-              Sponsor an Event
-              {sponsor.external ? (
-                <span className="sr-only"> (opens in a new tab)</span>
-              ) : null}
-            </ButtonLink>
-            <ButtonLink
-              href="#contact"
-              interest="retreat"
-              variant="outline"
-              className="w-full sm:w-auto"
-            >
-              Ask About a Family Retreat
+          <div className="mt-8">
+            <ButtonLink href="#programs" variant="gold" className="w-full sm:w-auto">
+              See What We Do
             </ButtonLink>
           </div>
           <ul className="mt-8 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
@@ -89,22 +65,7 @@ export function Hero() {
               className="relative h-auto w-full rounded-[2rem]"
             />
           </div>
-          <div className="mt-5 flex overflow-hidden rounded-2xl border-2 border-navy bg-field shadow-[8px_8px_0_0_#0A1A3B]">
-            <div className="flex-1 px-5 py-4">
-              <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em]">
-                Admit one family
-              </p>
-              <p className="font-display text-4xl font-bold leading-none">Free</p>
-              <p className="mt-2 text-base text-muted">
-                Kids, siblings, and parents. No fee for families.
-              </p>
-            </div>
-            <div className="flex w-14 items-center justify-center border-l-2 border-dashed border-navy bg-gold sm:w-16">
-              <span className="rotate-180 font-ui text-xs font-bold uppercase tracking-[0.22em] text-navy [writing-mode:vertical-rl]">
-                Joy
-              </span>
-            </div>
-          </div>
+          <HeroTicket />
         </div>
       </div>
     </section>

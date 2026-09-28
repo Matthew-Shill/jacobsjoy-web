@@ -36,10 +36,9 @@ export default function PrivacyPage() {
           <p className="mt-4 text-base leading-relaxed">
             {site.name} is a 501(c)(3) nonprofit based in Pittsford, New York. We
             provide free carnival days at children’s hospitals and free family
-            retreats at Christian campgrounds for children facing cancer, living
-            with disabilities, or battling life-altering diseases. We are also
-            the fiscal sponsor of Every1Camp, which provides free sports camps
-            for children with disabilities. Every1Camp runs those camps. You can
+            retreats for children facing cancer, living with disabilities, or
+            battling life-altering diseases. We partner with Every1Camp to
+            support free sports camps for children with disabilities. You can
             reach us at{" "}
             <a className="font-semibold underline underline-offset-4" href={site.emailHref}>
               {site.email}
@@ -59,9 +58,9 @@ export default function PrivacyPage() {
           <p className="mt-4 text-base leading-relaxed">
             The contact form asks for your name, email address, and a message.
             You can also tell us whether you want a hospital carnival day, a
-            family retreat, camp registration, to sponsor or volunteer at an
-            event, to donate to Jacob’s Joy, or to support Every1Camp. That
-            choice is optional.
+            family retreat, Every1Camp registration, to sponsor a carnival or
+            retreat, to volunteer at a hospital carnival, to donate to Jacob’s
+            Joy, or to support Every1Camp. That choice is optional.
           </p>
           <p className="mt-4 text-base leading-relaxed">
             The form does not save that information on the website. When you
@@ -83,8 +82,9 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-4 text-base leading-relaxed">
             We use what you send to reply, and to plan the thing you wrote about:
-            a hospital carnival day, a family retreat, camp registration, a gift,
-            an event sponsorship, volunteering, or support for Every1Camp. We do
+            a hospital carnival day, a family retreat, Every1Camp registration, a
+            gift, sponsorship of a carnival or retreat, volunteering at a
+            hospital carnival, or support for Every1Camp. We do
             not sell personal
             information. We do not share it with advertisers. We do not use it
             to build a mailing list unless you asked to hear from us.

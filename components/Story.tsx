@@ -31,9 +31,9 @@ export function Story() {
               </p>
               <p>
                 Jacob’s Joy, Inc. was created in his memory. The work today is
-                free carnival days at children’s hospitals, free family retreats
-                at Christian campgrounds, and support for free sports camps
-                through our partnership with Every1Camp.
+                free carnival days at children’s hospitals, free family retreats,
+                and support for free sports camps through our partnership with
+                Every1Camp.
               </p>
             </div>
             <div className="mt-8">
@@ -42,11 +42,25 @@ export function Story() {
               </h3>
               <p className="mt-3 text-base leading-relaxed">{site.mission}</p>
             </div>
-            <p className="mt-8 text-lg leading-relaxed">
-              Our logo is the “I love you” hand sign — the same one Jacob and his
-              dad share in photos from his hospital room. It is still how this
-              work says what it means.
-            </p>
+            <div className="mt-8 space-y-5 text-lg leading-relaxed">
+              <p>
+                When Jacob woke from emergency brain surgery, he was left
+                paralyzed and unable to speak. He had always been a talkative,
+                loving, and outgoing boy, so losing his ability to communicate
+                was especially hard. But even though he could barely move his
+                arms, one of the first things he was able to do was make the “I
+                love you” hand sign, something he and his parents had shared
+                since he was little.
+              </p>
+              <p>
+                His parents weren’t sure how much of what they were saying was
+                getting through to him. Seeing that familiar sign let them know
+                he could hear them and was responding. In the middle of
+                everything he was going through, Jacob found a way to tell them
+                he loved them. The “I love you” hand sign in our logo honors
+                that moment.
+              </p>
+            </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
